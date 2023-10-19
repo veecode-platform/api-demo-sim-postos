@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-demo-sim-postos 
+spec:
+  selector:
+    matchLabels:
+      app: api-demo-sim-postos
+  template:
+    metadata:
+      labels:
+        app: api-demo-sim-postos
+    spec:
+      containers:
+        - image: okteto.dev/java-gradle-api-demo-sim-postos:1.0.0
+          name: api-demo-sim-postos
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-demo-sim-postos
+spec:
+  type: ClusterIP
+  ports:
+    - name: "api-demo-sim-postos"
+      port: 8080
+  selector:
+    app: api-demo-sim-postos
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-demo-sim-postos
+  annotations:
+    dev.okteto.com/generate-host: api-demo-sim-postos
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: api-demo-sim-postos
+                port:
+                  number: 8080
+            path: /
+            pathType: ImplementationSpecific

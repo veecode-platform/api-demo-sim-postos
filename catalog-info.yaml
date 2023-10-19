@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: api-demo-sim-postos
+  description: "api-demo-sim-postos"
+  annotations:
+    github.com/project-slug: veecode-platform/api-demo-sim-postos
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: "api-demo-sim-postos"
+    vault.io/secrets-path: "api-demo-sim-postos"
+    grafana/tag-selector: "api-demo-sim-postos"
+    grafana/alert-label-selector: "alertname=api-demo-sim-postos"
+    argocd/proxy-url: '/argocd/api'
+    argocd/app-name: "api-demo-sim-postos"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/admin"
+
+
+

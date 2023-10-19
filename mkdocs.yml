@@ -1,0 +1,8 @@
+site_name: "api-demo-sim-postos"
+site_description: "api-demo-sim-postos"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core

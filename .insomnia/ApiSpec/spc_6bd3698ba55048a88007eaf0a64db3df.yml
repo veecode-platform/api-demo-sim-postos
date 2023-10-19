@@ -1,0 +1,59 @@
+_id: spc_api-demo-sim-postos
+type: ApiSpec
+parentId: wrk_api-demo-sim-postos
+modified: 1674573608115
+created: 1674571804450
+fileName: api-demo-sim-postos.yaml
+contents: "openapi: 3.0.0
+
+  info:
+
+  \  description: \"api-demo-sim-postos
+
+  \    Swagger at [http://swagger.io](http://swagger.io) or on
+  [irc.freenode.net,
+
+  \    #swagger](http://swagger.io/irc/).  For this sample, you can use the
+  api key
+
+  \    `special-key` to test the authorization filters.\"
+
+  \  version: 1.0.2
+
+  \  title: api-demo-sim-postos
+
+  \  termsOfService: http://swagger.io/terms/
+
+  \  contact:
+
+  \    email: apiteam@swagger.io
+
+  \  license:
+
+  \    name: Apache 2.0
+
+  \    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+  servers:
+
+  \  - url: https://rest.apr.vee.codes/api-demo-sim-postos
+  
+  tags:
+
+  \  - name: spec
+
+  \    description: Health
+
+  \    externalDocs:
+
+  \      description: Find out more
+
+  \      url: http://swagger.io
+
+  paths: {}
+
+
+  components: {}
+
+  \     "
+contentType: yaml
